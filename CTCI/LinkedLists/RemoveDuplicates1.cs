@@ -18,23 +18,6 @@ namespace CTCI.LinkedLists
 	{
 		public static void removeDuplicates(ListNode head)
 		{
-			ListNode temp = head;
-			ListNode prevNode = null;
-			HashSet<int> visited = new HashSet<int>();
-
-			while(temp != null)
-			{
-				if(visited.Contains(temp.data))
-				{
-					prevNode.next = temp.next;
-				}
-				else
-				{
-					visited.Add(temp.data);
-					prevNode = temp;
-				}
-				temp = temp.next;
-			}
 		}
 
 		public static void removeDups(ListNode head)

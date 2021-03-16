@@ -24,11 +24,11 @@ namespace CTCI
 			head.next = new ListNode(11);
 			head.next.next = new ListNode(11);
 			head.next.next.next = new ListNode(12);
-			head.next.next.next.next = new ListNode(15);
-			head.next.next.next.next.next = new ListNode(15);
+			head.next.next.next.next = new ListNode(11);
+			head.next.next.next.next.next = new ListNode(11);
 
 			//ListNode x = 
-			RemoveDuplicates1.removeDuplicates(head);
+			RemoveDuplicates1.removeDupsDummy(head);
 			ListNode n = head;
 			Console.WriteLine(n.data);
 			while (n.next != null)

@@ -20,29 +20,32 @@ namespace CTCI
 			////-------------------  ******  Test Justification Starts  ******  -------------------
 
 
-			Node head = new Node(9);
-			head.next = new Node(9);
-			head.next.next = new Node(9);
-			head.next.next.next = new Node(9);
-			head.next.next.next.next = new Node(9);
-			head.next.next.next.next.next = new Node(9);
-			head.next.next.next.next.next.next = new Node(6);
+			Node head = new Node(1);
+			head.next = new Node(2);
+			head.next.next = new Node(3);
+			head.next.next.next = new Node(4);
+			head.next.next.next.next = new Node(5);
+			head.next.next.next.next.next = new Node(4);
+			head.next.next.next.next.next.next = new Node(3);
+			head.next.next.next.next.next.next.next = new Node(2);
+			head.next.next.next.next.next.next.next.next = new Node(1);
+			//head.next.next.next.next.next.next.next.next.next = new Node(10);
 
-			Node head1 = new Node(9);
-			head1.next = new Node(9);
-			head1.next.next = new Node(9);
-			head1.next.next.next = new Node(9);
-			head1.next.next.next.next = new Node(9);
-			head1.next.next.next.next.next = new Node(9);
-			head1.next.next.next.next.next.next = new Node(6);
+			//Node head1 = new Node(9);
+			//head1.next = new Node(9);
+			//head1.next.next = new Node(9);
+			//head1.next.next.next = new Node(9);
+			//head1.next.next.next.next = new Node(9);
+			//head1.next.next.next.next.next = new Node(9);
+			//head1.next.next.next.next.next.next = new Node(6);
 
-			Node n = SumLists.addLists(head, head1);
-			
-			while (n != null)
-			{
-				Console.WriteLine(n.data);
-				n = n.next;
-			}
+			bool n = Palindrome.isPalindrome(head);
+			Console.WriteLine(n);
+			//while (n != null)
+			//{
+			//	Console.WriteLine(n.data);
+			//	n = n.next;
+			//}
 
 			Console.ReadLine();
 		}

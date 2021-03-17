@@ -20,16 +20,24 @@ namespace CTCI
 			////-------------------  ******  Test Justification Starts  ******  -------------------
 
 
-			Node head = new Node(16);
-			head.next = new Node(15);
-			head.next.next = new Node(14);
-			head.next.next.next = new Node(13);
-			head.next.next.next.next = new Node(12);
-			head.next.next.next.next.next = new Node(11);
-			head.next.next.next.next.next.next = new Node(10);
-			//ListNode x = 
-			Node n = PartitionLists.partitionInPlaceOther(head, 13);
-			//Node n = head;
+			Node head = new Node(9);
+			head.next = new Node(9);
+			head.next.next = new Node(9);
+			head.next.next.next = new Node(9);
+			head.next.next.next.next = new Node(9);
+			head.next.next.next.next.next = new Node(9);
+			//head.next.next.next.next.next.next = new Node(6);
+
+			Node head1 = new Node(9);
+			head1.next = new Node(9);
+			head1.next.next = new Node(9);
+			head1.next.next.next = new Node(9);
+			head1.next.next.next.next = new Node(9);
+			head1.next.next.next.next.next = new Node(9);
+			head1.next.next.next.next.next.next = new Node(6);
+
+			Node n = SumLists.addLists(null, null);
+			
 			while (n != null)
 			{
 				Console.WriteLine(n.data);

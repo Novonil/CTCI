@@ -20,32 +20,34 @@ namespace CTCI
 			////-------------------  ******  Test Justification Starts  ******  -------------------
 
 
-			Node head = new Node(1);
-			head.next = new Node(2);
-			head.next.next = new Node(3);
-			head.next.next.next = new Node(4);
-			head.next.next.next.next = new Node(5);
-			head.next.next.next.next.next = new Node(4);
-			head.next.next.next.next.next.next = new Node(3);
-			head.next.next.next.next.next.next.next = new Node(2);
-			head.next.next.next.next.next.next.next.next = new Node(1);
-			//head.next.next.next.next.next.next.next.next.next = new Node(10);
+			ListNode head = new ListNode(1,false);
+			head.next = new ListNode(2,false);
+			head.next.next = new ListNode(3,false);
+			head.next.next.next = new ListNode(4,false);
+			head.next.next.next.next = new ListNode(5,false);
+			head.next.next.next.next.next = new ListNode(4,false);
+			head.next.next.next.next.next.next = new ListNode(3,false);
+			head.next.next.next.next.next.next.next = new ListNode(2,false);
+			head.next.next.next.next.next.next.next.next = new ListNode(1,false);
+			//head.next.next.next.next.next.next.next.next.next = new ListNode(10);
 
-			//Node head1 = new Node(9);
-			//head1.next = new Node(9);
-			//head1.next.next = new Node(9);
-			//head1.next.next.next = new Node(9);
-			//head1.next.next.next.next = new Node(9);
-			//head1.next.next.next.next.next = new Node(9);
-			//head1.next.next.next.next.next.next = new Node(6);
+			//ListNode head1 = new ListNode(9);
+			//head1.next = new ListNode(9);
+			//head1.next.next = new ListNode(9);
+			//head1.next.next.next = new ListNode(9);
+			//head1.next.next.next.next = new ListNode(9);
+			//head1.next.next.next.next.next = new ListNode(9);
+			//head1.next.next.next.next.next.next = new ListNode(6);
 
-			bool n = Palindrome.isPalindrome(head);
+			bool n = DeleteMiddleNode.deleteMiddleNodeLastNode(head.next.next.next.next.next.next.next.next);
 			Console.WriteLine(n);
-			//while (n != null)
-			//{
-			//	Console.WriteLine(n.data);
-			//	n = n.next;
-			//}
+
+			ListNode nodes = head;
+			while (nodes != null)
+			{
+				Console.WriteLine(nodes.data + " " + nodes.isDummy);
+				nodes = nodes.next;
+			}
 
 			Console.ReadLine();
 		}

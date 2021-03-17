@@ -26,7 +26,7 @@ namespace CTCI
 			head.next.next.next = new Node(9);
 			head.next.next.next.next = new Node(9);
 			head.next.next.next.next.next = new Node(9);
-			//head.next.next.next.next.next.next = new Node(6);
+			head.next.next.next.next.next.next = new Node(6);
 
 			Node head1 = new Node(9);
 			head1.next = new Node(9);
@@ -36,7 +36,7 @@ namespace CTCI
 			head1.next.next.next.next.next = new Node(9);
 			head1.next.next.next.next.next.next = new Node(6);
 
-			Node n = SumLists.addLists(null, null);
+			Node n = SumLists.addLists(head, head1);
 			
 			while (n != null)
 			{

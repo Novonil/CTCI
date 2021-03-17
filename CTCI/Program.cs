@@ -19,35 +19,37 @@ namespace CTCI
 			//Console.WriteLine(Isu.isRotation("waterbottle","erbottlewat"));
 			////-------------------  ******  Test Justification Starts  ******  -------------------
 
+			Node head1 = new Node(10);
+			head1.next = new Node(11);
+			head1.next.next = new Node(12);
+			head1.next.next.next = new Node(13);
+			head1.next.next.next.next = new Node(14);
+			head1.next.next.next.next.next = new Node(15);
+			head1.next.next.next.next.next.next = new Node(16);
+			head1.next.next.next.next.next.next.next = new Node(17);
+			head1.next.next.next.next.next.next.next.next = new Node(18);
 
-			ListNode head = new ListNode(1,false);
-			head.next = new ListNode(2,false);
-			head.next.next = new ListNode(3,false);
-			head.next.next.next = new ListNode(4,false);
-			head.next.next.next.next = new ListNode(5,false);
-			head.next.next.next.next.next = new ListNode(4,false);
-			head.next.next.next.next.next.next = new ListNode(3,false);
-			head.next.next.next.next.next.next.next = new ListNode(2,false);
-			head.next.next.next.next.next.next.next.next = new ListNode(1,false);
-			//head.next.next.next.next.next.next.next.next.next = new ListNode(10);
+			Node head = new Node(1);
+			head.next = new Node(2);
+			head.next.next = new Node(3);
+			head.next.next.next = new Node(4);
+			//head.next.next.next.next = head1.next.next.next.next.next.next.next.next;
+			//head.next.next.next.next.next.next = new Node(7);
+			//head.next.next.next.next.next.next.next = new Node(8);
+			//head.next.next.next.next.next.next.next.next = new Node(9);
+			//head.next.next.next.next.next.next.next.next.next = new Node(10);
 
-			//ListNode head1 = new ListNode(9);
-			//head1.next = new ListNode(9);
-			//head1.next.next = new ListNode(9);
-			//head1.next.next.next = new ListNode(9);
-			//head1.next.next.next.next = new ListNode(9);
-			//head1.next.next.next.next.next = new ListNode(9);
-			//head1.next.next.next.next.next.next = new ListNode(6);
+			
+			Node nodes = Intersection.intersectionPoint(head, head1);
+			Console.WriteLine(nodes.data);
 
-			bool n = DeleteMiddleNode.deleteMiddleNodeLastNode(head.next.next.next.next.next.next.next.next);
-			Console.WriteLine(n);
 
-			ListNode nodes = head;
-			while (nodes != null)
-			{
-				Console.WriteLine(nodes.data + " " + nodes.isDummy);
-				nodes = nodes.next;
-			}
+
+			//while (nodes != null)
+			//{
+			//	Console.WriteLine(nodes.data);
+			//	nodes = nodes.next;
+			//}
 
 			Console.ReadLine();
 		}

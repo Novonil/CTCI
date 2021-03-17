@@ -4,22 +4,12 @@ using System.Text;
 
 namespace CTCI.LinkedLists
 {
-	public class ListNode
-	{
-		public int data;
-		public ListNode next;
-
-		public ListNode(int data)
-		{
-			this.data = data;
-		}
-	}
 	class RemoveDuplicates1
 	{
-		public static void removeDuplicates(ListNode head)
+		public static void removeDuplicates(Node head)
 		{
-			ListNode previous = null;
-			ListNode current = head;
+			Node previous = null;
+			Node current = head;
 			HashSet<int> seenValues = new HashSet<int>();
 
 
@@ -38,10 +28,10 @@ namespace CTCI.LinkedLists
 			}
 		}
 
-		public static void removeDups(ListNode head)
+		public static void removeDups(Node head)
 		{
-			ListNode current = head;
-			ListNode next = head;
+			Node current = head;
+			Node next = head;
 
 			while(current != null)
 			{
@@ -61,11 +51,11 @@ namespace CTCI.LinkedLists
 			}
 		}
 
-		public static void removeDupsDummy(ListNode head)
+		public static void removeDupsDummy(Node head)
 		{
-			ListNode current = head;
-			ListNode next = null;
-			ListNode previous = null;
+			Node current = head;
+			Node next = null;
+			Node previous = null;
 
 			while (current != null)
 			{

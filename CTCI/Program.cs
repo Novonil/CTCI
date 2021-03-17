@@ -28,19 +28,20 @@ namespace CTCI
 			head1.next.next.next.next.next.next = new Node(16);
 			head1.next.next.next.next.next.next.next = new Node(17);
 			head1.next.next.next.next.next.next.next.next = new Node(18);
+			head1.next.next.next.next.next.next.next.next.next = head1.next.next.next.next.next;
 
-			Node head = new Node(1);
-			head.next = new Node(2);
-			head.next.next = new Node(3);
-			head.next.next.next = new Node(4);
+			//Node head = new Node(1);
+			//head.next = new Node(2);
+			//head.next.next = new Node(3);
+			//head.next.next.next = new Node(4);
 			//head.next.next.next.next = head1.next.next.next.next.next.next.next.next;
 			//head.next.next.next.next.next.next = new Node(7);
 			//head.next.next.next.next.next.next.next = new Node(8);
 			//head.next.next.next.next.next.next.next.next = new Node(9);
 			//head.next.next.next.next.next.next.next.next.next = new Node(10);
 
-			
-			Node nodes = Intersection.intersectionPoint(head, head1);
+
+			Node nodes = LoopDetection.loopBeginning(head1);
 			Console.WriteLine(nodes.data);
 
 

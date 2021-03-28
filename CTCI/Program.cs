@@ -1,5 +1,7 @@
 ﻿using CTCI.LinkedLists;
+using CTCI.TreesAndGraphs;
 using System;
+using System.Collections.Generic;
 
 namespace CTCI
 {
@@ -19,16 +21,16 @@ namespace CTCI
 			//Console.WriteLine(Isu.isRotation("waterbottle","erbottlewat"));
 			////-------------------  ******  Test Justification Starts  ******  -------------------
 
-			Node head1 = new Node(10);
-			head1.next = new Node(11);
-			head1.next.next = new Node(12);
-			head1.next.next.next = new Node(13);
-			head1.next.next.next.next = new Node(14);
-			head1.next.next.next.next.next = new Node(15);
-			head1.next.next.next.next.next.next = new Node(16);
-			head1.next.next.next.next.next.next.next = new Node(17);
-			head1.next.next.next.next.next.next.next.next = new Node(18);
-			head1.next.next.next.next.next.next.next.next.next = head1.next.next.next.next.next;
+			//Node head1 = new Node(10);
+			//head1.next = new Node(11);
+			//head1.next.next = new Node(12);
+			//head1.next.next.next = new Node(13);
+			//head1.next.next.next.next = new Node(14);
+			//head1.next.next.next.next.next = new Node(15);
+			//head1.next.next.next.next.next.next = new Node(16);
+			//head1.next.next.next.next.next.next.next = new Node(17);
+			//head1.next.next.next.next.next.next.next.next = new Node(18);
+			//head1.next.next.next.next.next.next.next.next.next = head1.next.next.next.next.next;
 
 			//Node head = new Node(1);
 			//head.next = new Node(2);
@@ -41,17 +43,61 @@ namespace CTCI
 			//head.next.next.next.next.next.next.next.next.next = new Node(10);
 
 
-			Node nodes = LoopDetection.loopBeginning(head1);
-			Console.WriteLine(nodes.data);
+			//Node nodes = LoopDetection.loopBeginning(head1);
+			//Console.WriteLine(nodes.data);
 
+			//int[][] graph = new int[5][];
 
+			//graph[0] = new int[] { 0, 1, 0, 1, 1 };
+			//graph[1] = new int[] { 1, 1, 1, 1, 1 };
+			//graph[2] = new int[] { 1, 1, 1, 1, 1 };
+			//graph[3] = new int[] { 1, 1, 1, 1, 1 };
+			//graph[4] = new int[] { 0, 0, 0, 0, 0 };
+
+			//int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8 };
 
 			//while (nodes != null)
 			//{
 			//	Console.WriteLine(nodes.data);
 			//	nodes = nodes.next;
 			//}
+			//bool result = RouteBetweenNodes.search(graph, 4, 1);
 
+			//TreesAndGraphs.Node n = MinimalTree.createMinimalBST(nums);
+
+			//InOrderTraversal.inOrderTraversal(n);
+			//PreOrderTraversal.preOrderTraversal(n);
+			//PostOrderTraversal.postOrderTraversal(n);
+
+			//Console.WriteLine(result);
+
+
+			TreesAndGraphs.Node root = new TreesAndGraphs.Node(100);
+			root.left = new TreesAndGraphs.Node(50);
+			root.right = new TreesAndGraphs.Node(150);
+
+			root.left.left = new TreesAndGraphs.Node(25);
+			root.left.right = new TreesAndGraphs.Node(75);
+
+			root.right.left = new TreesAndGraphs.Node(125);
+			root.right.right = new TreesAndGraphs.Node(175);
+
+			root.left.left.left = new TreesAndGraphs.Node(15);
+			root.left.right.right = new TreesAndGraphs.Node(85);
+			root.right.left.right = new TreesAndGraphs.Node(137);
+			root.right.right.left = new TreesAndGraphs.Node(167);
+
+
+			List<List<TreesAndGraphs.Node>> result = ListOfDepths.createLevelNodeListBFS(root);
+
+			foreach(List<TreesAndGraphs.Node> list in result)
+			{
+				foreach(TreesAndGraphs.Node n in list)
+				{
+					Console.Write(n.data + " ");
+				}
+				Console.WriteLine();
+			}
 			Console.ReadLine();
 		}
 	}
